@@ -1,9 +1,10 @@
+
 #include<iostream>
 using namespace std;
 int f(int n, int k);
 int main(int argc, char const *argv[])
 {
-    cout<<"ÇëÊäÈënÓëk"<<endl;
+    cout<<"Ã‡Ã«ÃŠÃ¤ÃˆÃ«nÃ“Ã«k"<<endl;
     int n,k;
     cin>>n;
     cin>>k;

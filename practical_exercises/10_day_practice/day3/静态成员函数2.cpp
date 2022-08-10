@@ -3,22 +3,32 @@ using namespace std;
 class A
 {
     public:
-        static void f(A a);
+        A()
+        { 
+            x = 10;
+        }
+    static void f(A a);       //åœ¨ç±»å†…åªå£°æ˜äº†
+    void get()
+    {
+        cout << this->x << endl;
+
+    }
     private:
         int x;
 };
-void A::f(A a)
+void A::f(A a)          //åœ¨ç±»å¤– å®šä¹‰å¹¶èµ‹å€¼ 
 {
    
-    //¾²Ì¬³ÉÔ±º¯ÊıÖ»ÄÜÒıÓÃÊôÓÚ¸ÃÀàµÄ¾²Ì¬Êı¾İ³ÉÔ±»ò¾²Ì¬³ÉÔ±º¯Êı¡£
-    // cout<<x; //¶ÔxµÄÒıÓÃÊÇ´íÎóµÄ
-    cout<<a.x;  //ÕıÈ·
+    //é™æ€æˆå‘˜å‡½æ•°åªèƒ½å¼•ç”¨å±äºè¯¥ç±»çš„é™æ€æ•°æ®æˆå‘˜æˆ–é™æ€æˆå‘˜å‡½æ•°ã€‚
+    // cout<<x; //å¯¹xçš„å¼•ç”¨æ˜¯é”™è¯¯çš„
+    cout<<a.x;  //æ­£ç¡®
 }
 
 int main(int argc, char const *argv[])
 {
     A a;
-    a.f(A());
+    a.get();
+    a.f(a);
     system("pause");
     return 0;
 }
